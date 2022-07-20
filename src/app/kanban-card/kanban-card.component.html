@@ -1,0 +1,15 @@
+<mat-card class="kanban-card">
+  <div class="details">
+    <div *ngIf="card.tag" class="card-detail card-tag" [ngStyle]="{backgroundColor: card.tag.color}">{{card.tag.text}}</div>
+    <div class="card-detail card-title">{{card.title}}</div>
+    <div class="card-detail card-desc">{{card.description}}</div>
+    <div class="card-detail card-link"><a [href]="card.link" target="_blank">Document Link →</a></div>
+  </div>
+  <div class="card-col-2">
+    <span class="card-id">{{card.id}}</span>
+    <button *ngIf="!lastColumn" mat-icon-button (click)="onMoveCard()">
+      <mat-icon>arrow_forward</mat-icon>
+    </button>
+  </div>
+  
+</mat-card>

@@ -1,0 +1,63 @@
+.column-header {
+  text-align: center;
+  border-radius: 5px 5px 0px 0px;
+  height: 50px;
+  position: relative;
+
+  .column-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.column-container {
+  padding: 0px;
+  background-color: #f0f0f0;
+
+  .cards-container {
+    padding: 10px;
+
+    .kanban-card {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.placeholder {
+  background-color: white;
+  border-radius: 10px;
+  border-style: dashed;
+  border-width: 2px;
+  position: relative;
+
+  &.add-card {
+    height: 200px;
+  }
+
+  &.drop-card-area {
+    height: 100px;
+  }
+
+  .placeholder-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.add-card-icon {
+      height: 50px;
+      width: 50px;
+      font-size: 50px;
+
+      .mat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+      }
+    }
+  }
+}

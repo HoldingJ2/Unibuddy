@@ -1,0 +1,34 @@
+.kanban-container {
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+
+.kanban-column {
+  width: 100%;
+  margin: 5px;
+}
+
+.mat-grid-tile ::ng-deep {
+  .mat-figure {
+    padding: 5px;
+  }
+}
+
+.search-container {
+  margin: 10px;
+}
+
+.tags-container {
+  margin: 10px;
+  width: 100px;
+}

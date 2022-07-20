@@ -1,0 +1,24 @@
+<mat-card class="column-container">
+  <mat-card-title class="column-header" [ngStyle]="{backgroundColor: colour}">
+    <span class="column-title">{{columnTitle}}</span></mat-card-title>
+
+    <div class="cards-container">
+      <app-kanban-card *ngFor="let card of cards"
+        class="kanban-card"
+        [card]="card"
+        [lastColumn]="lastColumn"
+        (moveCard)="onMoveCard(card)">
+      </app-kanban-card>
+
+      <div *ngIf="allowCreate" class="placeholder add-card"  [ngStyle]="{'border-color': colour}">
+        <button mat-icon-button (click)="onAddCard()" class="placeholder-content add-card-icon">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="!allowCreate" class="placeholder drop-card-area" [ngStyle]="{'border-color': colour}">
+        <span class="placeholder-content">
+          Drag and drop here
+        </span>
+      </div>
+  </div>
+</mat-card>
